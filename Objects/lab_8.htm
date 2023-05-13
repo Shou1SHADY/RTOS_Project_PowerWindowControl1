@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\lab_8.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\lab_8.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Wed May 10 00:19:23 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Sat May 13 17:55:43 2023
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1119,7 +1119,7 @@ Global Symbols
 
 <P><STRONG><a name="[ee]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[7b]"></a>DownButton</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, main.o(.text.DownButton))
+<P><STRONG><a name="[7b]"></a>DownButton</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, main.o(.text.DownButton))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = DownButton &rArr; Motor &rArr; xQueueGenericSend &rArr; prvUnlockQueue &rArr; prvNotifyQueueSetContainer &rArr; prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; uxListRemove
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
@@ -1170,8 +1170,7 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pushAndLock
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[9d]"></a>InitializeF</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, main.o(.text.InitializeF))
@@ -1193,8 +1192,7 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pushAndLock
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[96]"></a>PortE_Init</STRONG> (Thumb, 158 bytes, Stack size 40 bytes, main.o(.text.PortE_Init))
@@ -1225,7 +1223,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
 </UL>
-<P><STRONG><a name="[7a]"></a>UpButton</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, main.o(.text.UpButton))
+<P><STRONG><a name="[7a]"></a>UpButton</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, main.o(.text.UpButton))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = UpButton &rArr; Motor &rArr; xQueueGenericSend &rArr; prvUnlockQueue &rArr; prvNotifyQueueSetContainer &rArr; prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; uxListRemove
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
@@ -1240,7 +1238,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSuppressTicksAndSleep
 </UL>
 
-<P><STRONG><a name="[7d]"></a>limiter</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, main.o(.text.limiter))
+<P><STRONG><a name="[7d]"></a>limiter</STRONG> (Thumb, 168 bytes, Stack size 24 bytes, main.o(.text.limiter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = limiter &rArr; Motor &rArr; xQueueGenericSend &rArr; prvUnlockQueue &rArr; prvNotifyQueueSetContainer &rArr; prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; uxListRemove
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskResume
@@ -1275,7 +1273,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[79]"></a>manualDownButton</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, main.o(.text.manualDownButton))
+<P><STRONG><a name="[79]"></a>manualDownButton</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, main.o(.text.manualDownButton))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = manualDownButton &rArr; Motor &rArr; xQueueGenericSend &rArr; prvUnlockQueue &rArr; prvNotifyQueueSetContainer &rArr; prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; uxListRemove
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
@@ -1284,7 +1282,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.main)
 </UL>
-<P><STRONG><a name="[7c]"></a>manualUpButton</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, main.o(.text.manualUpButton))
+<P><STRONG><a name="[7c]"></a>manualUpButton</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, main.o(.text.manualUpButton))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = manualUpButton &rArr; Motor &rArr; xQueueGenericSend &rArr; prvUnlockQueue &rArr; prvNotifyQueueSetContainer &rArr; prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; uxListRemove
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
@@ -1293,15 +1291,14 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.main)
 </UL>
-<P><STRONG><a name="[7e]"></a>pushAndLock</STRONG> (Thumb, 168 bytes, Stack size 16 bytes, main.o(.text.pushAndLock))
-<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = pushAndLock &rArr; xQueueSemaphoreTake &rArr; prvUnlockQueue &rArr; prvNotifyQueueSetContainer &rArr; prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; uxListRemove
+<P><STRONG><a name="[7e]"></a>pushAndLock</STRONG> (Thumb, 202 bytes, Stack size 16 bytes, main.o(.text.pushAndLock))
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = pushAndLock &rArr; Motor &rArr; xQueueGenericSend &rArr; prvUnlockQueue &rArr; prvNotifyQueueSetContainer &rArr; prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; uxListRemove
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntDisable
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortD_Init
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntEnable
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitializeB
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinRead
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.main)
 </UL>
@@ -1843,7 +1840,8 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;limiter
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pushAndLock
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;limiter
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;manualUpButton
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DownButton
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpButton

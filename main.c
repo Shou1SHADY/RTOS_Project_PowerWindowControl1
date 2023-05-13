@@ -464,7 +464,7 @@ xSemaphoreGive( xMutex );
 
 void limiter ( void *pvParameters){
 
-
+xSemaphoreTake( limit, 0 );
 for(;;){
 	
 xSemaphoreTake( limit, portMAX_DELAY );
@@ -511,7 +511,7 @@ void manualDownButton( void *pvParameters ) //SW2 manual sawa2  portF
 	//taskENTER_CRITICAL() ;
 
 
-		//	xSemaphoreTake( xSemaphoreManualDown, portMAX_DELAY );
+			xSemaphoreTake( xSemaphoreManualDown, 0 );
 	
 	for( ;; )
 	{
@@ -539,7 +539,7 @@ void manualDownButton( void *pvParameters ) //SW2 manual sawa2  portF
 
 
 
-		//	xSemaphoreTake( xSemaphore, portMAX_DELAY );
+			xSemaphoreTake( xSemaphore, 0 );
 
 	for( ;; )
 	{
@@ -583,7 +583,7 @@ void manualDownButton( void *pvParameters ) //SW2 manual sawa2  portF
 {
 	  
 //	taskENTER_CRITICAL() ;
-			//xSemaphoreTake( xSemaphore2, portMAX_DELAY );
+			xSemaphoreTake( xSemaphore2, 0 );
 	for( ;; )
 	{
 		xSemaphoreTake( xSemaphore2, portMAX_DELAY );
@@ -623,7 +623,7 @@ void manualUpButton ( void *pvParameters ) {
 
 
 
-		//	xSemaphoreTake( xSemaphoreManualUp, portMAX_DELAY );
+			xSemaphoreTake( xSemaphoreManualUp, 0 );
 	
 	for( ;; )
 	{
@@ -650,7 +650,8 @@ void manualUpButton ( void *pvParameters ) {
 
 /*-----------------------------------------------------------*/
 void pushAndLock(void *pvParameters){ // Disable passenger from controlling
-
+int counter = 0 ;
+	xSemaphoreTake( Pushandlock, 0 );
 for( ;; )
 	{
 		xSemaphoreTake( Pushandlock, portMAX_DELAY );
@@ -662,14 +663,20 @@ GPIOIntDisable(GPIO_PORTD_BASE, GPIO_PIN_1 | GPIO_PIN_2);
 // Disable interrupts on Port B pins 0 and 1
 GPIOIntDisable(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 GPIOF->DATA |= 0x04 ;
+			if (counter == 0 ){
+			Motor(0);
+				counter++ ; 
+		}
+			
 		}
 		GPIOF->DATA &= ~0x04 ;
 	}
 		else {
 		GPIOIntEnable(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
-		 InitializeB();
+		 //InitializeB();
 		GPIOIntEnable(GPIO_PORTD_BASE, GPIO_PIN_1 | GPIO_PIN_2);
-		PortD_Init();
+		//PortD_Init();
+			counter = 0 ; 
 		}
 		//GPIOIntClear(GPIO_PORTE_BASE, GPIO_PIN_2);
 	}
